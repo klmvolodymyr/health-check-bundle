@@ -1,0 +1,8 @@
+variables:
+  NAME:    volodymyr-klymniuk/health-check-bundle
+  VERSION: $CI_COMMIT_TAG
+
+stages:
+  - publish
+
+include: 'http://gitlab-service.manageteam.ec2-internal/public-group/gitlab-shared-pipelines/raw/master/gitlub-composer-publish-job.yml'
