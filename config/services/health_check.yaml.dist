@@ -1,0 +1,21 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+
+    # alias for liip RunnerManager service, need for HealthController autowire
+    Liip\MonitorBundle\Helper\RunnerManager:
+        alias: 'liip_monitor.helper.runner_manager'
+
+    # api interface for health check
+    HealthCheckBundle\Controller\HealthController:
+
+    # mongo db connection check
+    HealthCheckBundle\Check\MongoDbConnection:
+        arguments:
+            - default:
+                  uri: '%env(MONGODB__URL)%'
+                  database: '%env(MONGODB__DB)%'
+        tags:
+            - { name: liip_monitor.check_collection, group: external }

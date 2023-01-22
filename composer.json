@@ -1,0 +1,24 @@
+{
+    "name": "volodymyr-klymniuk/health-check-bundle",
+    "description": "Symfony bundle to check your service health",
+    "type": "library",
+    "license": "MIT-advertising",
+    "autoload": {
+        "psr-4": {
+            "VolodymyrKlymniuk\\HealthCheckBundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Volodymyr Klymniuk",
+            "email": "volodymyr.klymniuk@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "sensio/framework-extra-bundle": "^6.2",
+        "liip/monitor-bundle": "^2.19",
+        "zendframework/zenddiagnostics": "^1.6",
+        "zendframework/zftool": "^0.1.0"
+    }
+}
